@@ -45,7 +45,6 @@ class YWOAuthViewController: UIViewController {
     
     //MARK: - 监听方法
     @objc fileprivate func backAction(){
-        
         SVProgressHUD.dismiss()
         dismiss(animated: true, completion: nil)
     }
