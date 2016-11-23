@@ -49,9 +49,15 @@ class ZHZMainViewController: UITabBarController {
         
         
     }
-    
     private func contorller(dic:[String:Any])->UIViewController{
         //1 取得字典内容
+        
+        /// 使用guard语句将上述的3个问题一并解决：
+        
+//       1. 是对你所期望的条件做检查，而非不符合你期望的。又是和assert很相似。如果条件不符合，guard的else语句就运行，从而退出这个函数。
+//       2.  如果通过了条件判断，可选类型的变量在guard语句被调用的范围内会被自动的拆包 - 这个例子中该范围是fooGuard函数内部。这是一个很重要，却有点奇怪的特性，但让guard语句十分实用。
+//       3. 对你所不期望的情况早做检查，使得你写的函数更易读，更易维护。
+    
         guard let clsName = dic["clsName"] as? String,
             let title = dic["title"] as? String,
             let imageName = dic["imageName"] as? String,
@@ -60,16 +66,12 @@ class ZHZMainViewController: UITabBarController {
             else {
                 return UIViewController()
         }
-
-        
         //2 创建视图控制器
         let vc = cls.init()
         vc.title = title
-        
         //设置控制器的访客信息字典
         vc.visitorInfoDic = visitorDic
-        
-        //3 添加图片
+                //3 添加图片
         vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
         vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         //4 修改 tabbar 的标题前景色

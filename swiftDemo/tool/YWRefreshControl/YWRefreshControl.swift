@@ -64,6 +64,11 @@ class YWRefreshControl: UIControl {
     //KVO 如果不释放会崩溃
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
+        
+        
+        
+        
+        
         guard let sv = scrollView else {
             return
         }

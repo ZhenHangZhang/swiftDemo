@@ -8,6 +8,33 @@
 
 import Foundation
 
+//MARK: - 全局通知定义
+/// 用户需要登录通知
+let YWUserShouldLoginNotification = "YWUserShouldLoginNotification"
+
+/// 成功登录通知
+let YWuserLoginSuccessedNotification = "YWuserLoginSuccessedNotification"
+
+
+/// 宏定义宽高；
+let SCREEN_W = UIScreen.main.bounds.size.width
+let SCREEN_H = UIScreen.main.bounds.size.height
+
+func SCREEN_WIDTH(object:UIView) ->CGFloat{
+    
+    return object.frame.size.width
+}
+func SCREEN_HEIGHT(object:UIView) ->CGFloat{
+    
+    return object.frame.size.height
+}
+
+func RGBColor(r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) -> UIColor {
+    return UIColor(colorLiteralRed: Float(r), green: Float(g), blue: Float(b), alpha: Float(a))
+}
+
+
+
 //MARK: - 应用程序信息
 //应用程序 ID
 let YWAppKey = ""
@@ -17,12 +44,8 @@ let YWAppSecret = ""
 let YWRedirectURL = ""
 
 
-//MARK: - 全局通知定义
-/// 用户需要登录通知
-let YWUserShouldLoginNotification = "YWUserShouldLoginNotification"
 
-/// 成功登录通知
-let YWuserLoginSuccessedNotification = "YWuserLoginSuccessedNotification"
+
 
 
 //MARK: - 微博配图视图常量
@@ -39,3 +62,22 @@ let YWStatusPictureViewWidth = UIScreen.yw_screenWidth() - 2 * pictureOutterMarg
 
 /// 每个Item 默认的高宽度
 let YWStatusPictureItemWith = (YWStatusPictureViewWidth - CGFloat(2) * pictureInnerMargin)/CGFloat(3)
+
+func ZHZDLog<T>(message:T,fileName:String = #file,methodName:String = #function,lineNum:Int = #line){
+    #if DEBUG
+        let logStr:String = (fileName as NSString).pathComponents.last!.replacingOccurrences(of: "swift", with: "");
+    print("类\(logStr)方法\(methodName)行[\(lineNum)]数据\(message)")
+    #endif
+}
+
+
+
+
+
+
+
+
+
+
+
+
