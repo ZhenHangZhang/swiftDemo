@@ -22,7 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         window?.rootViewController = ZHZMainViewController()
         window?.makeKeyAndVisible()
-ZHZDLog(message: "这特么是什么鬼")
+        ZHZDLog(message: "这特么是什么鬼")
+        let lab = YWFPSLabel(frame: CGRect())
+        UIApplication.shared.keyWindow!.addSubview(lab)
+
         return true
     }
 

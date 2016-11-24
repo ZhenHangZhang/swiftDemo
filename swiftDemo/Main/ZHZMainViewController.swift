@@ -19,16 +19,56 @@ class ZHZMainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addchildvcs()
+        stupBtn()
+
+        steupTimer()
         
+        delegate = self
+        steupNewfeatureView()
         
-        // Do any additional setup after loading the view.
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(userLogin), name: NSNotification.Name(rawValue: YWUserShouldLoginNotification), object: nil)
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    deinit {
+        timer?.invalidate()
+        NotificationCenter.default.removeObserver(self)
+    }
+    /**
+     portrait :竖屏，肖像
+     landscape : 横屏，风景画
+     
+     - 使用代码控制方向之后 好处 可以在横屏的时候 单独处理
+     - 设置支持方向之后 当前的控制器及子控制器都会遵守这个方向
+     - 如果播放视频 通常是通过 modal 展现的 present
+     */
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
+    //登录通知监听方法
+    @objc private func userLogin(noti:Notification){
+        
+        print("登录通知\(noti)")
+        var deadlineTime = DispatchTime.now()
+        
+        //判断 noti 是否有值 如果有 提示用户重新登录
+        
+        if noti.object != nil {
+            SVProgressHUD.setDefaultMaskType(.gradient)
+            SVProgressHUD.showInfo(withStatus: "用户登录已经超时，需要重新登录")
+            //修改延迟时间
+            deadlineTime = DispatchTime.now() + 2
+        }
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            SVProgressHUD.setDefaultMaskType(.clear)
+            //展现登录控制器
+            let nvc = UINavigationController(rootViewController: YWOAuthViewController())
+            self.present(nvc, animated: true, completion: nil)
+        }
+    }
+
     fileprivate func addchildvcs(){
     
         let array: [[String:Any]] = [
@@ -101,16 +141,29 @@ extension ZHZMainViewController{
         composeBtn.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
         //添加点击事件
         composeBtn.addTarget(self, action: #selector(composeBtnAction), for: .touchUpInside)
-
      }
     
     @objc fileprivate func composeBtnAction(){
     
         print("点击撰写按钮")
-
+        //实例view
+        let view = YWComposeTypeView.composeTypeView()
+        //展示
+        view.show { [weak view] (clsName) in
+            //展现撰写微博控制器
+            guard let clsName = clsName,
+                let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? UIViewController.Type else{
+                    view?.removeFromSuperview()
+                    
+                    return
+            }
+            let vc = cls.init()
+            let nav = UINavigationController(rootViewController: vc)
+            self.present(nav, animated: true, completion: {
+                view?.removeFromSuperview()
+            })
+        }
     }
-    
-    
 }
 
 extension ZHZMainViewController:UITabBarControllerDelegate{
@@ -127,17 +180,17 @@ extension ZHZMainViewController:UITabBarControllerDelegate{
             let nav = childViewControllers[0] as! UINavigationController
             let vc = nav.childViewControllers[0] as! HomeViewController
             //滚动到顶部
-            //            vc.tableView?.setContentOffset(CGPoint(x: 0,y: -64), animated: true)
-//            vc.tableView?.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+                        vc.tableView?.setContentOffset(CGPoint(x: 0,y: -64), animated: true)
+            vc.tableView?.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
             
-            //刷新数据
-//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
-//                vc.loadData()
-//            })
+//            刷新数据
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                vc.loadData()
+            })
             
-            // FIXME:下拉刷新不行
-            //            vc.tabBarItem.badgeValue = nil
-            //            UIApplication.shared.applicationIconBadgeNumber = 0
+//             FIXME:下拉刷新不行
+                        vc.tabBarItem.badgeValue = nil
+                        UIApplication.shared.applicationIconBadgeNumber = 0
         }
         
         
@@ -147,5 +200,62 @@ extension ZHZMainViewController:UITabBarControllerDelegate{
     }
     
 }
-
-
+// MARK: - 新特性视图处理
+extension ZHZMainViewController {
+    
+    fileprivate func steupNewfeatureView(){
+        //判断是否登录
+        if !ZHZNetworkManager.shared.userLogon {
+            return
+        }
+        let v = isNewVersion ? YWNewFeatureView.newFeatureView() : YWWelcomeView.welcomeView()
+        view.addSubview(v)
+        
+    }
+    
+    //extension 中可以有计算行属性 不会占用内存空间
+    private var isNewVersion: Bool {
+        
+        //取出当前是版本号
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        
+        //取出保存在偏好设置的版本号
+        let beforeVersion = UserDefaults.standard.string(forKey: "YWVersionKey") ?? ""
+        
+        //将当前的版本号偏好设置
+        UserDefaults.standard.set(currentVersion, forKey: "YWVersionKey")
+        
+        //返回 连个版本号是否一致
+        return currentVersion != beforeVersion
+        
+    }
+    
+    
+}
+//MARK:- 定时器相关方法
+extension ZHZMainViewController {
+    //定义定时器
+    fileprivate func steupTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 240.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        
+    }
+    //定期器触发方法
+    @objc fileprivate func updateTimer () {
+        
+        if !ZHZNetworkManager.shared.userLogon {
+            
+            return
+        }
+        
+        ZHZNetworkManager.shared.unreadCount { (unreadCount) in
+            print("检测到\(unreadCount)条微博")
+            
+            //设置 首页 tabBarItem 的badgeNumber
+            self.tabBar.items?[0].badgeValue = unreadCount > 0 ? "\(unreadCount)" : nil
+            
+            //设置 App的badgeNumber 从ios 8.0 之后 需要用户授权之后才能够显示
+            UIApplication.shared.applicationIconBadgeNumber = unreadCount
+            
+        }
+    }
+}

@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftDemo/Main/YWOAuthViewController.swift"
+            timestampString = "501652957.867703"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "webView(_:shouldStartLoadWith:navigationType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftDemo.YWOAuthViewController.webView (__ObjC.UIWebView, shouldStartLoadWith : Foundation.URLRequest, navigationType : __C.UIWebViewNavigationType) -&gt; Swift.Bool"
+                  moduleName = "swiftDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhanghangzhen/Desktop/swiftDemo/swiftDemo/Main/YWOAuthViewController.swift"
+                  timestampString = "501659508.420731"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftDemo.YWOAuthViewController.(webView (__ObjC.UIWebView, shouldStartLoadWith : Foundation.URLRequest, navigationType : __C.UIWebViewNavigationType) -&gt; Swift.Bool).(closure #1)"
+                  moduleName = "swiftDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhanghangzhen/Desktop/swiftDemo/swiftDemo/Main/YWOAuthViewController.swift"
+                  timestampString = "501659508.421975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -17,11 +17,13 @@ import UIKit
  不要动态创建控件 所有的控件提前创建好 在显示的时候 根据数据隐藏/显示
  cell中控件的层次太少 数量越少越好
  */
+ 
+
 class YWStatusViewModel: CustomStringConvertible{
     
     var status: YWStatus
     
-    /// 会员图标 - 存储型属性（用内存换 CPU）
+     /// 会员图标 - 存储型属性（用内存换 CPU）
     var memberImg:UIImage?
     
     /// 认证类型 -1 没有认证 0 认证用户 235 企业用户 220 达人

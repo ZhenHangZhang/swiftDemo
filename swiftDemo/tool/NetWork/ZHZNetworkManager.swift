@@ -63,11 +63,8 @@ class ZHZNetworkManager: AFHTTPSessionManager {
             //实例化字典
             parameters = [String: AnyObject]()
         }
-        
         //设置参数字典,代码在此一定不会为nil
         parameters!["access_token"] = token as AnyObject?
-        
-        
         //判断name 和 data
         if let name = name ,
             let data = data{
@@ -78,7 +75,6 @@ class ZHZNetworkManager: AFHTTPSessionManager {
             request(method: method, URLString: URLString, parameters: parameters, completion: completion)
         }
     }
-    
     /// 上传文件必须是POST方法，GET只能获取数据
     /// 封装AFN 的上传方法
     ///

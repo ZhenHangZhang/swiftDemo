@@ -51,7 +51,7 @@ class YWOAuthViewController: UIViewController {
     
     @objc private func autoFillAction(){
         //准备JS
-        let js = "document.getElementById('userId').value = '你的微博账户';" + "document.getElementById('passwd').value = '你的微博密码';"
+        let js = "document.getElementById('userId').value = '13323819717';" + "document.getElementById('passwd').value = 'zhang13323819717';"
         //让webView 执行js
 //        webView.evaluateJavaScript(js, completionHandler: nil)
                 webView.stringByEvaluatingJavaScript(from: js)
@@ -79,7 +79,7 @@ extension YWOAuthViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         
-        print("请求的地址\(request.url?.absoluteURL)")
+        ZHZDLog(message: "请求的地址\(request.url?.absoluteURL)")
         //如果请求地址包含不包含 https://www.baidu.com  加载页面 /否则 就是包含 包含就往下走
         if request.url?.absoluteString.hasPrefix(YWRedirectURL) == false {
             return true
@@ -97,6 +97,7 @@ extension YWOAuthViewController: UIWebViewDelegate {
         let code = request.url?.query?.substring(from: "code=".endIndex) ?? ""
         
         
+        ZHZDLog(message: "\(code)")
         //请求accessToken
         ZHZNetworkManager.shared.loadAccessToken(code: code) { (isSuccess) in
             if isSuccess {

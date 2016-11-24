@@ -15,9 +15,7 @@ extension ZHZNetworkManager
     /// - parameter max_id:     返回ID小于或等于max_id的微博，默认为0
     /// - parameter completion: 完成回调
     func statusList(since_id: Int64 = 0, max_id: Int64 = 0, completion:@escaping (_ list:[[String: AnyObject]]?,_ isSuccess: Bool)->()) {
-        
         let urlStr = "https://api.weibo.com/2/statuses/home_timeline.json"
-        
         let params = ["since_id": since_id, "max_id": max_id > 0 ?max_id - 1 : 0]
         tokenRequest(URLString: urlStr, parameters: params as [String : AnyObject]?) { (json, isSuccess) in
             //从json 中获取 statues 字典数组  如果 as？ 失败 result = nil

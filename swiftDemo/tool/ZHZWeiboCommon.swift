@@ -37,16 +37,11 @@ func RGBColor(r:CGFloat,g:CGFloat,b:CGFloat,a:CGFloat) -> UIColor {
 
 //MARK: - 应用程序信息
 //应用程序 ID
-let YWAppKey = ""
+let YWAppKey = "568898243"
 //应用程序加密信息（开发者可以申请修改）
-let YWAppSecret = ""
+let YWAppSecret = "38a4f8204cc784f81f9f0daaf31e02e3"
 //回调地址 登录完成的跳转 URL 参数以 get 形式拼接
-let YWRedirectURL = ""
-
-
-
-
-
+let YWRedirectURL = "http://www.sharesdk.cn"
 
 //MARK: - 微博配图视图常量
 /// 配图视图外侧的间距

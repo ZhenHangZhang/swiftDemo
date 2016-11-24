@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1437A649D1777113BACAB8DF /* Pods_swiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F646090A036CC2662D121E /* Pods_swiftDemo.framework */; };
+		927CC4841DE688C400F0C99F /* YWFPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC4831DE688C400F0C99F /* YWFPSLabel.swift */; };
+		927CC48A1DE68BC200F0C99F /* YWNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC4861DE68BC200F0C99F /* YWNewFeatureView.swift */; };
+		927CC48B1DE68BC200F0C99F /* YWNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CC4871DE68BC200F0C99F /* YWNewFeatureView.xib */; };
+		927CC48C1DE68BC200F0C99F /* YWWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC4881DE68BC200F0C99F /* YWWelcomeView.swift */; };
+		927CC48D1DE68BC200F0C99F /* YWWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CC4891DE68BC200F0C99F /* YWWelcomeView.xib */; };
+		927CC4931DE6935700F0C99F /* YWComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC48F1DE6935700F0C99F /* YWComposeTypeButton.swift */; };
+		927CC4941DE6935700F0C99F /* YWComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CC4901DE6935700F0C99F /* YWComposeTypeButton.xib */; };
+		927CC4951DE6935700F0C99F /* YWComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC4911DE6935700F0C99F /* YWComposeTypeView.swift */; };
+		927CC4961DE6935700F0C99F /* YWComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CC4921DE6935700F0C99F /* YWComposeTypeView.xib */; };
+		927CC4991DE6B6E800F0C99F /* YWComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC4971DE6B6E800F0C99F /* YWComposeViewController.swift */; };
+		927CC49A1DE6B6E800F0C99F /* YWComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927CC4981DE6B6E800F0C99F /* YWComposeViewController.xib */; };
+		927CC49C1DE6B72900F0C99F /* YWComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927CC49B1DE6B72900F0C99F /* YWComposeTextView.swift */; };
 		9281CC501DE2B2C700643607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281CC4F1DE2B2C700643607 /* AppDelegate.swift */; };
 		9281CC521DE2B2C700643607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281CC511DE2B2C700643607 /* ViewController.swift */; };
 		9281CC551DE2B2C700643607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9281CC531DE2B2C700643607 /* Main.storyboard */; };
@@ -58,11 +70,32 @@
 		9281CD121DE2FE2500643607 /* YWEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281CD0E1DE2FE2500643607 /* YWEmoticon.swift */; };
 		9281CD131DE2FE2500643607 /* YWEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281CD0F1DE2FE2500643607 /* YWEmoticonPackage.swift */; };
 		9281CD141DE2FE2500643607 /* YWEmonticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281CD101DE2FE2500643607 /* YWEmonticonManager.swift */; };
+		9284837D1DE57D6B00B450D9 /* YWStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284837C1DE57D6B00B450D9 /* YWStatusListViewModel.swift */; };
+		9284837F1DE58EF800B450D9 /* YWDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284837E1DE58EF800B450D9 /* YWDemoViewController.swift */; };
+		928483811DE5906D00B450D9 /* YWTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928483801DE5906D00B450D9 /* YWTitleButton.swift */; };
+		928483891DE5969A00B450D9 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928483881DE5969A00B450D9 /* FFLabel.swift */; };
+		9284838B1DE5976900B450D9 /* YWStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284838A1DE5976900B450D9 /* YWStatusPictureView.swift */; };
+		928483911DE5993D00B450D9 /* YWStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284838E1DE5993D00B450D9 /* YWStatusCell.swift */; };
+		928483921DE5993D00B450D9 /* YWStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9284838F1DE5993D00B450D9 /* YWStatusNormalCell.xib */; };
+		928483931DE5993D00B450D9 /* YWStatusRetweedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928483901DE5993D00B450D9 /* YWStatusRetweedCell.xib */; };
+		928483951DE599C000B450D9 /* YWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928483941DE599C000B450D9 /* YWWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7FBEF37D3A68E80E22F84364 /* Pods-swiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDemo/Pods-swiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		830D7F6E5EBC0EC665CFF1B2 /* Pods-swiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDemo/Pods-swiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		927CC4831DE688C400F0C99F /* YWFPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWFPSLabel.swift; sourceTree = "<group>"; };
+		927CC4861DE68BC200F0C99F /* YWNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWNewFeatureView.swift; sourceTree = "<group>"; };
+		927CC4871DE68BC200F0C99F /* YWNewFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWNewFeatureView.xib; sourceTree = "<group>"; };
+		927CC4881DE68BC200F0C99F /* YWWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWWelcomeView.swift; sourceTree = "<group>"; };
+		927CC4891DE68BC200F0C99F /* YWWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWWelcomeView.xib; sourceTree = "<group>"; };
+		927CC48F1DE6935700F0C99F /* YWComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWComposeTypeButton.swift; sourceTree = "<group>"; };
+		927CC4901DE6935700F0C99F /* YWComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWComposeTypeButton.xib; sourceTree = "<group>"; };
+		927CC4911DE6935700F0C99F /* YWComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWComposeTypeView.swift; sourceTree = "<group>"; };
+		927CC4921DE6935700F0C99F /* YWComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWComposeTypeView.xib; sourceTree = "<group>"; };
+		927CC4971DE6B6E800F0C99F /* YWComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWComposeViewController.swift; sourceTree = "<group>"; };
+		927CC4981DE6B6E800F0C99F /* YWComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWComposeViewController.xib; sourceTree = "<group>"; };
+		927CC49B1DE6B72900F0C99F /* YWComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWComposeTextView.swift; sourceTree = "<group>"; };
 		9281CC4C1DE2B2C700643607 /* swiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9281CC4F1DE2B2C700643607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9281CC511DE2B2C700643607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +164,15 @@
 		9281CD0E1DE2FE2500643607 /* YWEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWEmoticon.swift; sourceTree = "<group>"; };
 		9281CD0F1DE2FE2500643607 /* YWEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWEmoticonPackage.swift; sourceTree = "<group>"; };
 		9281CD101DE2FE2500643607 /* YWEmonticonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWEmonticonManager.swift; sourceTree = "<group>"; };
+		9284837C1DE57D6B00B450D9 /* YWStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWStatusListViewModel.swift; sourceTree = "<group>"; };
+		9284837E1DE58EF800B450D9 /* YWDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWDemoViewController.swift; sourceTree = "<group>"; };
+		928483801DE5906D00B450D9 /* YWTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWTitleButton.swift; sourceTree = "<group>"; };
+		928483881DE5969A00B450D9 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		9284838A1DE5976900B450D9 /* YWStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWStatusPictureView.swift; sourceTree = "<group>"; };
+		9284838E1DE5993D00B450D9 /* YWStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWStatusCell.swift; sourceTree = "<group>"; };
+		9284838F1DE5993D00B450D9 /* YWStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWStatusNormalCell.xib; sourceTree = "<group>"; };
+		928483901DE5993D00B450D9 /* YWStatusRetweedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWStatusRetweedCell.xib; sourceTree = "<group>"; };
+		928483941DE599C000B450D9 /* YWWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWWebViewController.swift; sourceTree = "<group>"; };
 		A1F646090A036CC2662D121E /* Pods_swiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +205,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		927CC4851DE68BC200F0C99F /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				927CC4861DE68BC200F0C99F /* YWNewFeatureView.swift */,
+				927CC4871DE68BC200F0C99F /* YWNewFeatureView.xib */,
+				927CC4881DE68BC200F0C99F /* YWWelcomeView.swift */,
+				927CC4891DE68BC200F0C99F /* YWWelcomeView.xib */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		927CC48E1DE6935700F0C99F /* composeType */ = {
+			isa = PBXGroup;
+			children = (
+				927CC49B1DE6B72900F0C99F /* YWComposeTextView.swift */,
+				927CC4971DE6B6E800F0C99F /* YWComposeViewController.swift */,
+				927CC4981DE6B6E800F0C99F /* YWComposeViewController.xib */,
+				927CC48F1DE6935700F0C99F /* YWComposeTypeButton.swift */,
+				927CC4901DE6935700F0C99F /* YWComposeTypeButton.xib */,
+				927CC4911DE6935700F0C99F /* YWComposeTypeView.swift */,
+				927CC4921DE6935700F0C99F /* YWComposeTypeView.xib */,
+			);
+			path = composeType;
+			sourceTree = "<group>";
+		};
 		9281CC431DE2B2C700643607 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +252,9 @@
 		9281CC4E1DE2B2C700643607 /* swiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				927CC48E1DE6935700F0C99F /* composeType */,
+				927CC4851DE68BC200F0C99F /* NewFeature */,
+				9284837B1DE57D1600B450D9 /* View */,
 				9281CD081DE2FCF000643607 /* ViewModel */,
 				9281CD031DE2F68000643607 /* Model */,
 				9281CCED1DE2E84600643607 /* C */,
@@ -208,6 +278,7 @@
 				9281CCC91DE2BA2800643607 /* ZHZMainViewController.swift */,
 				9281CCCD1DE2BAFC00643607 /* ZHZNavViewController.swift */,
 				9281CCCF1DE2BB7700643607 /* ZHZBaseViewController.swift */,
+				9284837E1DE58EF800B450D9 /* YWDemoViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -294,6 +365,7 @@
 		9281CCED1DE2E84600643607 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				928483941DE599C000B450D9 /* YWWebViewController.swift */,
 				9281CD011DE2F56900643607 /* YWVisitorView.swift */,
 				9281CCEE1DE2E8C300643607 /* HomeViewController.swift */,
 				9281CCF01DE2E8D600643607 /* MessageViewController.swift */,
@@ -328,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				9281CD091DE2FD4400643607 /* YWStatusViewModel.swift */,
+				9284837C1DE57D6B00B450D9 /* YWStatusListViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -349,6 +422,20 @@
 				9281CD0F1DE2FE2500643607 /* YWEmoticonPackage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9284837B1DE57D1600B450D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9284838E1DE5993D00B450D9 /* YWStatusCell.swift */,
+				9284838F1DE5993D00B450D9 /* YWStatusNormalCell.xib */,
+				928483901DE5993D00B450D9 /* YWStatusRetweedCell.xib */,
+				9284838A1DE5976900B450D9 /* YWStatusPictureView.swift */,
+				928483881DE5969A00B450D9 /* FFLabel.swift */,
+				928483801DE5906D00B450D9 /* YWTitleButton.swift */,
+				927CC4831DE688C400F0C99F /* YWFPSLabel.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,13 +502,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927CC48B1DE68BC200F0C99F /* YWNewFeatureView.xib in Resources */,
 				9281CC5A1DE2B2C800643607 /* LaunchScreen.storyboard in Resources */,
+				927CC4961DE6935700F0C99F /* YWComposeTypeView.xib in Resources */,
+				927CC48D1DE68BC200F0C99F /* YWWelcomeView.xib in Resources */,
 				9281CC641DE2B3D200643607 /* Podfile in Resources */,
+				927CC4941DE6935700F0C99F /* YWComposeTypeButton.xib in Resources */,
 				9281CD111DE2FE2500643607 /* HMEmoticon.bundle in Resources */,
+				927CC49A1DE6B6E800F0C99F /* YWComposeViewController.xib in Resources */,
 				9281CD001DE2F3F300643607 /* YWRefreshView.xib in Resources */,
+				928483921DE5993D00B450D9 /* YWStatusNormalCell.xib in Resources */,
 				9281CCCC1DE2BADA00643607 /* Assets.xcassets in Resources */,
 				9281CCFD1DE2F3F300643607 /* YWMTRefreshView.xib in Resources */,
 				9281CC551DE2B2C700643607 /* Main.storyboard in Resources */,
+				928483931DE5993D00B450D9 /* YWStatusRetweedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,14 +576,20 @@
 			files = (
 				9281CD131DE2FE2500643607 /* YWEmoticonPackage.swift in Sources */,
 				9281CCD01DE2BB7700643607 /* ZHZBaseViewController.swift in Sources */,
+				927CC4931DE6935700F0C99F /* YWComposeTypeButton.swift in Sources */,
 				9281CCE21DE2C28800643607 /* UIImageView+WebImage.swift in Sources */,
+				928483911DE5993D00B450D9 /* YWStatusCell.swift in Sources */,
 				9281CCEA1DE2C61000643607 /* YWOAuthViewController.swift in Sources */,
+				927CC48C1DE68BC200F0C99F /* YWWelcomeView.swift in Sources */,
 				9281CCC01DE2B90800643607 /* UIColor+CZAddition.m in Sources */,
 				9281CCBA1DE2B90800643607 /* NSAttributedString+CZAdditon.m in Sources */,
+				927CC4841DE688C400F0C99F /* YWFPSLabel.swift in Sources */,
 				9281CCEF1DE2E8C300643607 /* HomeViewController.swift in Sources */,
 				9281CCF51DE2E91400643607 /* ProfileViewController.swift in Sources */,
 				9281CCDF1DE2C28800643607 /* Bundle+Extension.swift in Sources */,
 				9281CCBE1DE2B90800643607 /* NSString+CZPath.m in Sources */,
+				928483951DE599C000B450D9 /* YWWebViewController.swift in Sources */,
+				927CC4951DE6935700F0C99F /* YWComposeTypeView.swift in Sources */,
 				9281CCB91DE2B90800643607 /* NSArray+Log.m in Sources */,
 				9281CD0A1DE2FD4400643607 /* YWStatusViewModel.swift in Sources */,
 				9281CC521DE2B2C700643607 /* ViewController.swift in Sources */,
@@ -498,6 +598,7 @@
 				9281CCE81DE2C43E00643607 /* YWUserAccount.swift in Sources */,
 				9281CCFC1DE2F3F300643607 /* YWMTRefreshView.swift in Sources */,
 				9281CCBF1DE2B90800643607 /* UIButton+CZAddition.m in Sources */,
+				9284837D1DE57D6B00B450D9 /* YWStatusListViewModel.swift in Sources */,
 				9281CCC81DE2B9BE00643607 /* ZHZWeiboCommon.swift in Sources */,
 				9281CCEC1DE2C75400643607 /* ZHZNetworkManager+gategroy.swift in Sources */,
 				9281CD121DE2FE2500643607 /* YWEmoticon.swift in Sources */,
@@ -511,12 +612,19 @@
 				9281CCBB1DE2B90800643607 /* NSObject+CZRuntime.m in Sources */,
 				9281CCF31DE2E8FF00643607 /* DiscoverViewController.swift in Sources */,
 				9281CCE11DE2C28800643607 /* UIImage+Extensions.swift in Sources */,
+				9284838B1DE5976900B450D9 /* YWStatusPictureView.swift in Sources */,
 				9281CCC21DE2B90800643607 /* UILabel+CZAddition.m in Sources */,
 				9281CCC11DE2B90800643607 /* UIImage+Extension.m in Sources */,
+				927CC49C1DE6B72900F0C99F /* YWComposeTextView.swift in Sources */,
 				9281CCDA1DE2C1E500643607 /* UIBarButtonItem+Extension.swift in Sources */,
+				928483891DE5969A00B450D9 /* FFLabel.swift in Sources */,
 				9281CCF11DE2E8D600643607 /* MessageViewController.swift in Sources */,
 				9281CCC31DE2B90800643607 /* UIScreen+CZAddition.m in Sources */,
+				927CC4991DE6B6E800F0C99F /* YWComposeViewController.swift in Sources */,
+				927CC48A1DE68BC200F0C99F /* YWNewFeatureView.swift in Sources */,
 				9281CCCE1DE2BAFC00643607 /* ZHZNavViewController.swift in Sources */,
+				928483811DE5906D00B450D9 /* YWTitleButton.swift in Sources */,
+				9284837F1DE58EF800B450D9 /* YWDemoViewController.swift in Sources */,
 				9281CCFE1DE2F3F300643607 /* YWRefreshControl.swift in Sources */,
 				9281CC501DE2B2C700643607 /* AppDelegate.swift in Sources */,
 				9281CCCA1DE2BA2800643607 /* ZHZMainViewController.swift in Sources */,
